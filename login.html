@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.rtl.min.css" integrity="sha384-+4j30LffJ4tgIMrq9CwHvn0NjEvmuDCOfk6Rpg2xg7zgOxWWtLtozDEEVvBPgHqE" crossorigin="anonymous">
+    <link rel="javascript" href="/login.js"
+</head>
+<body>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="/login.js"></script>
+
+    <nav class="navbar navbar-expand-lg" style="background-color: #34cceb ; ">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="/index.html">COURSEME</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link " aria-current="page" href="/index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="/login.html">login</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/signup.html">signup</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/contactUs.html">contact us</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <section class="vh-100">
+        <div class="container-fluid h-custom">
+          <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-md-9 col-lg-6 col-xl-5">
+              <img src="./draw2.webp"
+                class="img-fluid" alt="Sample image">
+            </div>
+
+
+
+
+            <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
+              <form action="#" name="mform" method="post" onsubmit="return validation()">
+                    <br><br><br>
+                <!-- Email input -->
+                <div class="form-outline mb-4">
+                  <input type="email" id="form1" name="email" class="form-control form-control-lg" 
+                    placeholder="Enter a valid email address" />
+                  <label class="form-label" for="form1">Email address</label>
+                </div>
+      
+                <!-- Password input -->
+                <div class="form-outline mb-3">
+                  <input type="password" id="form2" name="pwd" class="form-control form-control-lg" "
+                    placeholder="Enter password" />
+                  <label class="form-label" for="form2">Password</label>
+                </div>
+      
+                <div class="d-flex justify-content-between align-items-center">
+                  <!-- Checkbox -->
+                  <div class="form-check mb-0">
+                    <input class="form-check-input me-2" type="checkbox" value="" id="form2Example3" />
+                    <label class="form-check-label" for="form2Example3">
+                      Remember me
+                    </label>
+                  </div>
+                  <a href="#!" class="text-body">Forgot password?</a>
+                </div>
+      
+                <div class="text-center text-lg-start mt-4 pt-2">
+                  <button type="button" class="btn btn-primary btn-lg"
+                    style="padding-left: 2.5rem; padding-right: 2.5rem;">Login</button>
+                  <p class="small fw-bold mt-2 pt-1 mb-0">Don't have an account? <a href="#!"
+                      class="link-danger">Register</a></p>
+                </div>
+      
+              </form>
+            </div>
+          </div>
+        </div>
+        <script>function validation() {
+
+          var password = document.getElementById('form2').value;
+      var email = document.getElementById('form1').value;
+      
+          if (password == "") {
+            document.getElementById('form2').innerHTML =" ** Enter Password"
+            return false;
+          }else if ((password.length <=6)  ||  (password.length >=20)) {
+            document.getElementById('form2').innerHTML =" ** user password should be between 6 to 20 characters "
+            return false;
+          }
+      
+      
+      
+          if (email == "") {
+            document.getElementById('form1').innerHTML = " ** Enter Email ID"
+            return false;
+          }else if (email.indexOf('@') <= 0) {
+            document.getElementById('form1').innerHTML = " **  @ Invalid Position"
+            return false;
+          }
+          }
+      
+      </script>
+          <!-- Right -->
+        </div>
+      </section>
+</body>
+</html>
